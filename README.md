@@ -1,2 +1,2 @@
 # AndroidBaseDemo
-android基础学习
+android基础学习,之后的代码会有部分是参考网上各位前辈的demo，如有雷同请勿见怪
