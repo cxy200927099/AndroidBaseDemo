@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <EditText 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:inputType="number"
+    	android:textSize="40sp"
+    	android:textColor="#00C5CD"
+    	android:id="@+id/editInputNumber" android:layout_weight="1"
+    	/>
+     <EditText 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:inputType="number"
+    	android:textSize="20sp"
+    	android:textColor="#999999"
+    	android:id="@+id/editResult"  android:layout_weight="1"
+    	/>
+    
+    <!-- 第一排C，删除，%， ➗采用线性布局，把这四个按钮按1：1：1：1比例布局 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_weight="1">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:background="#00E5EE"
+            android:text="C"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:background="#00E5EE"
+            android:text="←"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:background="#00E5EE"
+            android:text="％"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:background="#00C5CD"
+            android:text="÷"
+            />
+        
+	<!--第二排7，8，9， X一样采用线性布局，把这四个按钮按1：1：1：1比例布局  -->        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  android:layout_weight="1">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		    android:background="#FFFFFF"
+            android:text="7"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		    android:background="#FFFFFF"
+            android:text="8"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		    android:background="#FFFFFF"
+            android:text="9"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:background="#00C5CD"
+            android:text="×"
+            />   
+    </LinearLayout>
+    
+    <!--第三排4，5，6， 减号 一样采用线性布局，把这四个按钮按1：1：1：1比例布局  -->        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_weight="1">
+        
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		    android:background="#FFFFFF"
+            android:text="4"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		    android:background="#FFFFFF"
+            android:text="5"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="40sp"
+		   	android:background="#FFFFFF"
+            android:text="6"
+            />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:background="#00C5CD"
+            android:text="－"
+            />
+        
+    </LinearLayout>
+    
+    <!--最外层水平布局，包含最右边的 "+" 号和坐标的1，2，3，".", 0, =  -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_weight="2">
+        
+        <!--这一层垂直方向的线性layout与 +号 同一级别  -->
+        <LinearLayout 
+        	android:layout_width="wrap_content"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical"
+        	android:layout_weight="3">
+        	
+            <!--第4排的布局，与第5排布局上是嵌套咋一个垂直的线性布局中，比例1：1
+            下面包含3个button  -->
+            <LinearLayout 
+        		android:layout_width="match_parent"
+       	 		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+        		android:layout_weight="1">
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#000000"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="1"
+		            />
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#000000"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="2"
+		            />
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#000000"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="3"
+		            />
+	        </LinearLayout>
+	        
+             <!--第5排的布局，与第4排布局上是嵌套咋一个垂直的线性布局中，比例1：1
+            下面包含3个button  -->
+            <LinearLayout 
+        		android:layout_width="match_parent"
+       	 		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+        		android:layout_weight="1">
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#000000"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="."
+		            />
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#000000"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="0"
+		            />
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:textColor="#38bca8"
+		            android:textSize="40sp"
+		            android:background="#FFFFFF"
+		            android:text="="
+		            />
+	        </LinearLayout>
+ 
+         </LinearLayout>
+         
+        <!--+号与4，5两排的最外层线性布局形成3：1的线性布局  -->
+         <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="50sp"
+            android:background="#00C5CD"
+            android:text="+"
+            />       
+    </LinearLayout>
+    
+
+</LinearLayout>

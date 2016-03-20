@@ -24,13 +24,24 @@
         
         <activity 
             android:name=".layout.LayoutMainActivity"
-            android:label="LayoutMain" >
-            
+            android:label="LayoutMain" >       
         </activity>
+        <activity 
+            android:name=".layout.FrameLayoutActivity"
+            android:label="FrameLayout" >       
+        </activity>
+        <activity 
+            android:name=".layout.LinearLayoutActivity"
+            android:label="LinearLayout" >       
+        </activity>
+        <activity 
+            android:name=".layout.RelativeLayoutActivity"
+            android:label="RelativeLayout" >       
+        </activity>
+        
          <activity 
             android:name=".view.ViewMainActivity"
-            android:label="ViewMain" >
-            
+            android:label="ViewMain" >           
         </activity>
         
     </application>
